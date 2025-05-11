@@ -60,6 +60,8 @@ export class AdController {
     }
   }
 
+  // Report ads
+
   @UseGuards(RolesGuard)
   @Roles(UserRole.ADMIN)
   @Get('reported-ads')
