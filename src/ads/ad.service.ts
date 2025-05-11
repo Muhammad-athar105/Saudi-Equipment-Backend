@@ -32,6 +32,7 @@ export class AdService {
     files: Express.Multer.File[],
   ) {
     try {
+      // Check the files duplicatons
       const userAds = await this.adStore.findAllAds(user);
       const existingImages = userAds.flatMap((ad) => ad.images);
 
